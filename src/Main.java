@@ -1,3 +1,5 @@
+import com.orgabor.days.Days;
+
 /**
  * 
  */
@@ -86,15 +88,18 @@ public class Main {
 //		int[] ar = new int[2];
 //		try {
 //			System.out.println("3rd element of ar is " + ar[2]);
-//		} catch(ArrayIndexOutOfBoundsException e1) {
-//			System.out.println(e1.toString());
-//		} catch(Exception e2) {
-//			System.out.println(e2.toString());
+//		} catch(ArrayIndexOutOfBoundsException e) {
+//			throw new IndexOutOfBoundsException("index out of boundary");
+//		} catch(Exception e) {
+//			System.out.println(e.toString());
 //		} finally {
 //			System.out.println("oh well.");
 //		}	
 		
-		System.out.println(average(5,6,89,12,3));
+//		System.out.println(average(5,6,89,12,3));
+		
+		for(Days day: Days.values())
+			System.out.println(day.getDayOrder() + ". " + day );
 	    
 	}
 
@@ -106,7 +111,7 @@ public class Main {
 		return swappedArray;
 	}
 	
-	//we can enter as many ins as we want
+	//we can enter as many ints as we want
 	public static int average(int...numbers) {
 		int total = 0;
 		for(int x : numbers) {
